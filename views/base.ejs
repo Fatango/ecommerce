@@ -1,0 +1,29 @@
+<%- include('header.ejs') %>
+<div class="w3-container">
+  <% prods.forEach(function(prod){ %>
+    <div class="w3-row w3-quarter">
+      <div class="w3-col">
+        <div class="w3-card w3-white card_design">
+
+          <div class="w3-container w3-center">
+            <h5><%= prod.title %></h5>
+            <img src="<%= prod.imageUrl %>" alt="Avatar" class="card_img">
+            <p><%= prod.description %></p>
+
+            <div class="w3-section w3-center card-body">
+              
+              <form action="/" method="post">
+                <button class="w3-button w3-green btn">Add to Cart</button>
+                <input type="hidden" value="<%= prod._id %>" name="productId">
+                <button class="w3-button w3-red btn">Delete</button>                
+              </form>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+<%- include('footer.ejs') %>

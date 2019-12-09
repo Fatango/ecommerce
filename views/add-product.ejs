@@ -1,0 +1,26 @@
+<%- include('header.ejs') %>
+<div class="clearfix">
+  <div class="container center">
+    <form action="/add-product" method="post">
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Dosya Seç</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Başlık</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">İçerik</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Resim Url</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="imageUrl">
+      </div>
+      <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
+  </div>
+
+</div>
+<%- include('footer.ejs') %>
